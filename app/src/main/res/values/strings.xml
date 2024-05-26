@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherAPI</string>
+    <string name="btnGetData">データ取得</string>
+    <string name="btnGetWeather">お天気API</string>
+    <string name="radioLabel1">AsyncTaskで非同期処理</string>
+    <string name="radioLabel2">Executorで非同期処理</string>
+    <string name="weatherGuide">都市コード</string>
+    <string name="errCityCodeEmpty">都市コードが入力されていません。</string>
+</resources>
