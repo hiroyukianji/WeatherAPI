@@ -65,6 +65,19 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // 入力されている都市コードを取得
+                EditText cityInput = (EditText)findViewById(R.id.editCityCode);
+                String cityCode= cityInput.getText().toString();
+                if(cityCode.isEmpty()){
+                    int duration = Toast.LENGTH_LONG;
+                    Context context = getApplicationContext();
+                    Toast toast;
+                    // 選択されたラジオボタンを表示
+                    toast = Toast.makeText(context, "都市コードを入力して下さい。", duration);
+                    toast.show();
+                    return;
+                }
+
                 //　ボタンが押されたら、ソフトウェアキーボードを非表示にする.
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
